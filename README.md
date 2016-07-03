@@ -16,7 +16,7 @@ working with Microsoft's SAPI and its limitations.
 To call class ttspeak simply assign an object name and initialize the class with 
 a MAX_ARR_SIZE int and a ttspeak enum, MALE or FEMALE.
 EX:)
-    ttspeak speechMale = {256, ttspeak::FEMALE}
+    ttspeak speechFemale = {256, ttspeak::FEMALE}
   Where ttspeak is the main class name
   speechMale is an ObjectName.
   256 is the MAX_ARR_SIZE for the string input. Be weary and limit size as it may
