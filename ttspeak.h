@@ -1,6 +1,6 @@
 /***************************************************************** 
 ttspeak.h Information:
-	This header allows for use of Microsoft Speach API (SAPI)
+	This header allows for use of Microsoft Speech API (SAPI)
 	without the convuluted use of their function calls. ttspeak
 	initializes the COM objects and sets up the API for ease of
 	use, for people who just want a quick and easy way to get 
