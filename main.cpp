@@ -1,27 +1,30 @@
 #include <iostream>
 #include <string>
-// ttspeak header file. Include in your local path.
-#include <ttspeak.h>
 
-using namespace std;
+// Main include header
+#include <ttspeak.h>
 
 int main(int argc, char** argv)
 {
-	string text = "";
-	// ttspeak constructor of size 256 and voice of type
-	// female or male.
-	ttspeak speechFemale = { 100, ttspeak::FEMALE };
-	ttspeak speechMale = { 100, ttspeak::MALE };
-	do {
-		// input and assignment.
-		getline(cin, text);
-		
-		speechFemale.comSpeak(text);
-		getline(cin, text);
-		speechMale.comSpeak(text);
-	} while (text != "quit");
+	std::string saved;
+	// Class constructor called with object speechOut
+	ttspeak speechOut;
+	// Loads the ComSpeak function with max array size of 100
+	// and gender enum of type FEMALE
+	speechOut.loadComSpeak(100, ttspeak::gender::FEMALE);
+	// String to speech synthesis
+	speechOut.comSpeak("Hello World.");
 
-	speechMale.comSpeak("Goodbye User!");
-	speechFemale.comSpeak("Goodbye User!");
-	return EXIT_SUCCESS;
+	// Class constructor called with object speechIn
+	ttspeak speechIn;
+	// Loads Voice Input with default paramaters
+	speechIn.loadVoiceInput();
+	// Waits for full phrase input and will alter saved string to
+	// that input phrase. 
+	speechIn.voiceInput(saved);
+	// Input comparison example.
+	if (saved == "Hello world")
+		std::cout << "Successful Comparison\n";
+
+	return 0;
 }
