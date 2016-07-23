@@ -1,0 +1,12 @@
+Current Version of TTspeak v2.0.0
+Author: Gasca, K.
+Email: gasca.kevin.a@gmail.com
+
+***********
+Version 1.0 -
+- Speech Synthesis only. Male or female types come standard with Microsoft Registry.
+
+***********
+Version 2.X -
+- Speech recognition of English (409) added. Must have Windows Speech Recognition (Ease of Use) software
+	running at time of compile.
