@@ -11,7 +11,7 @@ int main(int argc, char** argv)
 	ttspeak speechOut;
 	// Loads the ComSpeak function with max array size of 100
 	// and gender enum of type FEMALE
-	speechOut.loadComSpeak(100, ttspeak::gender::FEMALE);
+	speechOut.loadComSpeak(100, FEMALE);
 	// String to speech synthesis
 	speechOut.comSpeak("Hello World.");
 
