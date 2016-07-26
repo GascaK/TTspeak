@@ -41,10 +41,10 @@ private:
 public:
 	ttspeak();
 	~ttspeak();
-	void loadComSpeak(int inArrSize, Speech_Gender);
+	void loadComSpeak(int, Speech_Gender);
 	void comSpeak(std::string);
 	void loadVoiceInput();
-	int voiceInput(std::string& saved);
+	int voiceInput(std::string&);
 };
 
 /* Constructor
