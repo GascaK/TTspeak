@@ -7,6 +7,8 @@ Version 1.0 -
 - Speech Synthesis only. Male or female types come standard with Microsoft Registry.
 
 ***********
-Version 2.X -
+Version 2.0.0 -
 - Speech recognition of English (409) added. Must have Windows Speech Recognition (Ease of Use) software
 	running at time of compile.
+Version 2.0.1 -
+- Added Global variable Speech_Gender enum value. 
