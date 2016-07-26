@@ -20,6 +20,9 @@ Author:	   Gasca, K.
 #include <sphelper.h>
 extern CComModule _Module;
 
+// Global Enum for Gender type
+enum Speech_Gender { MALE, FEMALE };
+
 // Main ttspeak class with constructor and destructor.
 class ttspeak
 {
@@ -38,8 +41,7 @@ private:
 public:
 	ttspeak();
 	~ttspeak();
-	enum gender { MALE, FEMALE };
-	void loadComSpeak(int inArrSize, gender);
+	void loadComSpeak(int inArrSize, Speech_Gender);
 	void comSpeak(std::string);
 	void loadVoiceInput();
 	int voiceInput(std::string& saved);
@@ -70,7 +72,7 @@ ttspeak::~ttspeak()
 
 /* Load function with two paramaters, integer inArrSize and
     public enum with identifier Gender of type int.      */
-void ttspeak::loadComSpeak(int inArrSize, ttspeak::gender newGender)
+void ttspeak::loadComSpeak(int inArrSize, Speech_Gender newGender)
 {
 	// MAX_ARR_SIZE is defined as the maximum input string literal your
 	// users can input. Users will be unable to exceed this length.
