@@ -29,7 +29,6 @@ class ttspeak
 private:
 	unsigned int MAX_ARR_SIZE;
 	wchar_t* localText;
-	LPWSTR ptr = NULL;
 	HRESULT hr = NULL;
 	ISpVoice* pVoice = nullptr;
 	CComPtr<ISpRecognizer>	cpRecog;
@@ -119,7 +118,7 @@ void ttspeak::comSpeak(std::string incText)
 	// Sets input string to string literal for assignment. Speak (SAPI) only
 	// accepts LPWSTR as input.
 	mbstowcs(localText, incText.c_str(), strlen( incText.c_str() ) +1 );
-	ptr = localText;
+	LPWSTR ptr = localText;
 	// Output of voice with possible XML-like commands. Search MSDN SAPI 
 	// documentation for further.
 	hr = pVoice->Speak(ptr, SPF_IS_XML, NULL);
