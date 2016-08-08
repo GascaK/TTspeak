@@ -194,6 +194,9 @@ int ttspeak::voiceInput(std::string& saved)
 			TRUE, &coMemResult, NULL);
 		checkOut(hr);
 	}
+	else
+		return 1;
+		
 	// Place holder for string return
 	char* temp = NULL;
 	// Sets the LPWSTR to type char[]
