@@ -2,7 +2,7 @@
 #include <string>
 
 // Main include header
-#include <ttspeak.h>
+#include "ttspeak.h"
 
 int main(int argc, char** argv)
 {
