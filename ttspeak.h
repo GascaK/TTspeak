@@ -217,7 +217,6 @@ int ttspeak::voiceInput(std::string& saved)
 	// Deletes temp allocated memory, cause you know c++.
 	delete[] temp;
 	return 0;
-
 }
 
 // Error handling segment. Checks input address of HRESULTS refrenced against
